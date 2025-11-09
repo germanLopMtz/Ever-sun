@@ -99,7 +99,6 @@ shape = SubResource("RectangleShape2D_fmwtl")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(4, 0)
-enabled = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(1, -1.0000019)
