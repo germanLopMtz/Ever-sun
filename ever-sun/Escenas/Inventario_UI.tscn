@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://k8awm8jx4a6l"]
+
+[ext_resource type="Script" uid="uid://bjt53x4jkkblk" path="res://Scripts/inventory_UI.gd" id="1_gbim3"]
+[ext_resource type="Resource" uid="uid://bep3sl5sgaw8k" path="res://Inventario/InventarioJugador.tres" id="2_uhsug"]
+
+[node name="Inventario" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gbim3")
+inventory_data = ExtResource("2_uhsug")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

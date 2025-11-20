@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bd8ia7xe0of15"]
+
+[ext_resource type="Script" uid="uid://ne1r8fq1in08" path="res://Scripts/Item_Data.gd" id="1_hw5uv"]
+[ext_resource type="Texture2D" uid="uid://clamno8bbujgm" path="res://Imagenes/Iconos_Items/Dogo_icono.jpeg" id="2_d6scr"]
+
+[resource]
+script = ExtResource("1_hw5uv")
+name = "Dogo"
+description = "Dogo del manos puercas
+"
+texture = ExtResource("2_d6scr")
+is_stackable = true
+metadata/_custom_type_script = "uid://ne1r8fq1in08"

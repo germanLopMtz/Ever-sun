@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ccsk1qb5x1lge"]
+
+[node name="Panel" type="Panel"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 9.0
+offset_top = 7.0
+offset_right = 29.0
+offset_bottom = 28.0

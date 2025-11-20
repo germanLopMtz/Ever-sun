@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cis5t7ncc8arr" path="res://Hermosillo 2.png" id="2_lgngo"]
 [ext_resource type="Texture2D" uid="uid://ccs1kqgiljo21" path="res://Hermosillo Ruinas.png" id="3_otwa2"]
 [ext_resource type="Texture2D" uid="uid://dx16mcrd1tgsl" path="res://Hermosillo Cate.png" id="4_aou4a"]
-[ext_resource type="PackedScene" uid="uid://jqpd063u35ik" path="res://Esenarios/player_1.tscn" id="5_aou4a"]
+[ext_resource type="PackedScene" uid="uid://jqpd063u35ik" path="res://Escenas/player_1.tscn" id="5_aou4a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lgngo"]
 texture = ExtResource("1_6ba58")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccs1kqgiljo21"
-path="res://.godot/imported/Hermosillo Ruinas.png-3bb46d6d839447f7c6ceebf3b60a01a8.ctex"
+uid="uid://clamno8bbujgm"
+path="res://.godot/imported/Dogo_icono.jpeg-e4bced962ceb3360abb652835fcfca6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Hermosillo Ruinas.png"
-dest_files=["res://.godot/imported/Hermosillo Ruinas.png-3bb46d6d839447f7c6ceebf3b60a01a8.ctex"]
+source_file="res://Imagenes/Iconos_Items/Dogo_icono.jpeg"
+dest_files=["res://.godot/imported/Dogo_icono.jpeg-e4bced962ceb3360abb652835fcfca6b.ctex"]
 
 [params]
 
