@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://k8awm8jx4a6l"]
+[gd_scene load_steps=4 format=3 uid="uid://k8awm8jx4a6l"]
 
 [ext_resource type="Script" uid="uid://bjt53x4jkkblk" path="res://Scripts/inventory_UI.gd" id="1_gbim3"]
 [ext_resource type="Resource" uid="uid://bep3sl5sgaw8k" path="res://Inventario/InventarioJugador.tres" id="2_uhsug"]
+[ext_resource type="PackedScene" uid="uid://ccsk1qb5x1lge" path="res://Escenas/Slot.tscn" id="3_myhlb"]
 
 [node name="Inventario" type="Control"]
 layout_mode = 3
@@ -12,6 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gbim3")
 inventory_data = ExtResource("2_uhsug")
+slot_scene = ExtResource("3_myhlb")
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 0

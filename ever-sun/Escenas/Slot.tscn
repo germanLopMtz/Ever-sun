@@ -1,13 +1,17 @@
-[gd_scene format=3 uid="uid://ccsk1qb5x1lge"]
+[gd_scene load_steps=2 format=3 uid="uid://ccsk1qb5x1lge"]
 
-[node name="Panel" type="Panel"]
-offset_right = 40.0
-offset_bottom = 40.0
+[ext_resource type="Script" uid="uid://clbac1aq27k7m" path="res://Scripts/slot_UI.gd" id="1_51vbh"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = -1
-offset_left = 9.0
-offset_top = 7.0
-offset_right = 29.0
-offset_bottom = 28.0
+[node name="Slot" type="PanelContainer"]
+script = ExtResource("1_51vbh")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="QuantityLabel" type="Label" parent="."]
+layout_mode = 2
