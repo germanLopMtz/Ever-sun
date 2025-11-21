@@ -3,6 +3,11 @@
 [ext_resource type="Script" uid="uid://clbac1aq27k7m" path="res://Scripts/slot_UI.gd" id="1_51vbh"]
 
 [node name="Slot" type="PanelContainer"]
+anchors_preset = -1
+anchor_right = 0.068
+anchor_bottom = 0.11100001
+offset_right = -0.33600616
+offset_bottom = 0.07199097
 script = ExtResource("1_51vbh")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

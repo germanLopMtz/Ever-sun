@@ -1,21 +1,323 @@
-[gd_scene load_steps=4 format=3 uid="uid://k8awm8jx4a6l"]
+[gd_scene load_steps=16 format=3 uid="uid://k8awm8jx4a6l"]
 
 [ext_resource type="Script" uid="uid://bjt53x4jkkblk" path="res://Scripts/inventory_UI.gd" id="1_gbim3"]
 [ext_resource type="Resource" uid="uid://bep3sl5sgaw8k" path="res://Inventario/InventarioJugador.tres" id="2_uhsug"]
 [ext_resource type="PackedScene" uid="uid://ccsk1qb5x1lge" path="res://Escenas/Slot.tscn" id="3_myhlb"]
+[ext_resource type="Texture2D" uid="uid://0mtg0qk3ojuj" path="res://Imagenes/Para Escenas/InventarioFinal.jpg" id="4_msesp"]
+[ext_resource type="Texture2D" uid="uid://dcpdjv1epllc8" path="res://Imagenes/Para Escenas/Barra de Vida.jpg" id="5_msesp"]
+[ext_resource type="Texture2D" uid="uid://6liu3qv3oubd" path="res://Sprites/pixilart-sprite.png" id="6_w2a7q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6r7yf"]
+atlas = ExtResource("6_w2a7q")
+region = Rect2(50, 44, 25, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17a4r"]
+atlas = ExtResource("6_w2a7q")
+region = Rect2(150, 44, 25, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2t6da"]
+atlas = ExtResource("6_w2a7q")
+region = Rect2(50, 66, 25, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jivea"]
+atlas = ExtResource("6_w2a7q")
+region = Rect2(150, 66, 25, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6ogt"]
+atlas = ExtResource("6_w2a7q")
+region = Rect2(0, 44, 20, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61gsl"]
+atlas = ExtResource("6_w2a7q")
+region = Rect2(100, 44, 20, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhpsi"]
+atlas = ExtResource("6_w2a7q")
+region = Rect2(0, 66, 20, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bm2wa"]
+atlas = ExtResource("6_w2a7q")
+region = Rect2(100, 66, 20, 22)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hbcx2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6r7yf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17a4r")
+}],
+"loop": true,
+"name": &"Abajo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2t6da")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jivea")
+}],
+"loop": true,
+"name": &"Arriba",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6ogt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_61gsl")
+}],
+"loop": true,
+"name": &"Derecha",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dhpsi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bm2wa")
+}],
+"loop": true,
+"name": &"Izquierda",
+"speed": 5.0
+}]
 
 [node name="Inventario" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = 11.0
+offset_right = -16.0
+offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gbim3")
 inventory_data = ExtResource("2_uhsug")
 slot_scene = ExtResource("3_myhlb")
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -6.0
+offset_top = 123.0
+offset_right = 34.0
+offset_bottom = 163.0
+
+[node name="Fondo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 35.0
+offset_right = 447.0
+offset_bottom = 270.0
+texture = ExtResource("4_msesp")
+expand_mode = 3
+
+[node name="PanelPersonaje" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 29.0
+offset_top = 1.0
+offset_right = 200.0
+offset_bottom = 116.0
+
+[node name="BarraVida" type="TextureProgressBar" parent="PanelPersonaje"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 136.0
+offset_right = 140.0
+offset_bottom = 152.0
+value = 100.0
+texture_progress = ExtResource("5_msesp")
+
+[node name="SlotCasco" parent="PanelPersonaje" instance=ExtResource("3_myhlb")]
+layout_mode = 1
+anchor_left = 0.07
+anchor_top = 0.409
+anchor_right = 0.22200002
+anchor_bottom = 0.63500005
+offset_left = 0.029999733
+offset_top = -0.034999847
+offset_right = 0.0379982
+offset_bottom = -0.025009155
+
+[node name="MarginContainer" parent="PanelPersonaje/SlotCasco" index="0"]
+visible = false
+
+[node name="TextureRect" parent="PanelPersonaje/SlotCasco/MarginContainer" index="0"]
+visible = false
+
+[node name="QuantityLabel" parent="PanelPersonaje/SlotCasco" index="1"]
+visible = false
+
+[node name="SlotPechera" parent="PanelPersonaje" instance=ExtResource("3_myhlb")]
+layout_mode = 1
+anchor_left = 0.07
+anchor_top = 0.409
+anchor_right = 0.22200002
+anchor_bottom = 0.63500005
+offset_left = -0.97000027
+offset_top = 28.965
+offset_right = -0.9620018
+offset_bottom = 28.97499
+
+[node name="MarginContainer" parent="PanelPersonaje/SlotPechera" index="0"]
+visible = false
+
+[node name="TextureRect" parent="PanelPersonaje/SlotPechera/MarginContainer" index="0"]
+visible = false
+
+[node name="QuantityLabel" parent="PanelPersonaje/SlotPechera" index="1"]
+visible = false
+
+[node name="SlotPantalon" parent="PanelPersonaje" instance=ExtResource("3_myhlb")]
+layout_mode = 1
+anchor_left = 0.07
+anchor_top = 0.409
+anchor_right = 0.22200002
+anchor_bottom = 0.63500005
+offset_left = 0.029999733
+offset_top = 56.965
+offset_right = 0.0379982
+offset_bottom = 56.97499
+
+[node name="MarginContainer" parent="PanelPersonaje/SlotPantalon" index="0"]
+visible = false
+
+[node name="TextureRect" parent="PanelPersonaje/SlotPantalon/MarginContainer" index="0"]
+visible = false
+
+[node name="QuantityLabel" parent="PanelPersonaje/SlotPantalon" index="1"]
+visible = false
+
+[node name="SlotZapatos" parent="PanelPersonaje" instance=ExtResource("3_myhlb")]
+layout_mode = 1
+anchor_left = 0.07
+anchor_top = 0.409
+anchor_right = 0.22200002
+anchor_bottom = 0.63500005
+offset_left = -0.97000027
+offset_top = 86.965
+offset_right = -0.9620018
+offset_bottom = 86.97499
+
+[node name="MarginContainer" parent="PanelPersonaje/SlotZapatos" index="0"]
+visible = false
+
+[node name="TextureRect" parent="PanelPersonaje/SlotZapatos/MarginContainer" index="0"]
+visible = false
+
+[node name="QuantityLabel" parent="PanelPersonaje/SlotZapatos" index="1"]
+visible = false
+
+[node name="SlotGuante" parent="PanelPersonaje" instance=ExtResource("3_myhlb")]
+layout_mode = 1
+anchor_left = 0.07
+anchor_top = 0.409
+anchor_right = 0.22200002
+anchor_bottom = 0.63500005
+offset_left = 140.03
+offset_top = -1.0349998
+offset_right = 140.038
+offset_bottom = -1.0250092
+
+[node name="MarginContainer" parent="PanelPersonaje/SlotGuante" index="0"]
+visible = false
+
+[node name="TextureRect" parent="PanelPersonaje/SlotGuante/MarginContainer" index="0"]
+visible = false
+
+[node name="QuantityLabel" parent="PanelPersonaje/SlotGuante" index="1"]
+visible = false
+
+[node name="SlotCamisa" parent="PanelPersonaje" instance=ExtResource("3_myhlb")]
+layout_mode = 1
+anchor_left = 0.07
+anchor_top = 0.409
+anchor_right = 0.22200002
+anchor_bottom = 0.63500005
+offset_left = 140.03
+offset_top = 27.965
+offset_right = 140.038
+offset_bottom = 27.97499
+
+[node name="MarginContainer" parent="PanelPersonaje/SlotCamisa" index="0"]
+visible = false
+
+[node name="TextureRect" parent="PanelPersonaje/SlotCamisa/MarginContainer" index="0"]
+visible = false
+
+[node name="QuantityLabel" parent="PanelPersonaje/SlotCamisa" index="1"]
+visible = false
+
+[node name="SlotMask" parent="PanelPersonaje" instance=ExtResource("3_myhlb")]
+layout_mode = 1
+anchor_left = 0.07
+anchor_top = 0.409
+anchor_right = 0.22200002
+anchor_bottom = 0.63500005
+offset_left = 141.03
+offset_top = 57.965
+offset_right = 141.038
+offset_bottom = 57.97499
+
+[node name="MarginContainer" parent="PanelPersonaje/SlotMask" index="0"]
+visible = false
+
+[node name="TextureRect" parent="PanelPersonaje/SlotMask/MarginContainer" index="0"]
+visible = false
+
+[node name="QuantityLabel" parent="PanelPersonaje/SlotMask" index="1"]
+visible = false
+
+[node name="Slot8" parent="PanelPersonaje" instance=ExtResource("3_myhlb")]
+layout_mode = 1
+anchor_left = 0.07
+anchor_top = 0.409
+anchor_right = 0.22200002
+anchor_bottom = 0.63500005
+offset_left = 141.03
+offset_top = 85.965
+offset_right = 141.038
+offset_bottom = 85.97499
+
+[node name="MarginContainer" parent="PanelPersonaje/Slot8" index="0"]
+visible = false
+
+[node name="TextureRect" parent="PanelPersonaje/Slot8/MarginContainer" index="0"]
+visible = false
+
+[node name="QuantityLabel" parent="PanelPersonaje/Slot8" index="1"]
+visible = false
+
+[node name="PreviewAnimado" type="AnimatedSprite2D" parent="PanelPersonaje"]
+z_index = 10
+texture_filter = 1
+position = Vector2(92, 93)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_hbcx2")
+animation = &"Derecha"
+autoplay = "Derecha"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 271.0
+offset_top = 71.0
+offset_right = 431.0
+offset_bottom = 255.0
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 6
+
+[editable path="PanelPersonaje/SlotCasco"]
+[editable path="PanelPersonaje/SlotPechera"]
+[editable path="PanelPersonaje/SlotPantalon"]
+[editable path="PanelPersonaje/SlotZapatos"]
+[editable path="PanelPersonaje/SlotGuante"]
+[editable path="PanelPersonaje/SlotCamisa"]
+[editable path="PanelPersonaje/SlotMask"]
+[editable path="PanelPersonaje/Slot8"]
