@@ -24,6 +24,16 @@ func _ready():
 	else:
 		push_warning("ADVERTENCIA: No has asignado un InventoryData en el Inspector de InventoryUI.")
 
+# Pega esto en inventory_ui.gd
+
+func _unhandled_input(event):
+	if event.is_action_pressed("toggle_inventario"):
+		# 1. Cambiamos la visibilidad (Si veo, no veo. Si no veo, veo)
+		visible = !visible
+		
+		# 2. Pausamos o Despausamos el árbol
+		get_tree().paused = visible
+
 func update_inventory_visuals(data: Inventory):
 	# Borrar hijos viejos
 	for child in grid_container.get_children():

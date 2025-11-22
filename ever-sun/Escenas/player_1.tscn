@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://jqpd063u35ik"]
+[gd_scene load_steps=14 format=3 uid="uid://jqpd063u35ik"]
 
 [ext_resource type="Script" uid="uid://c0d6gevtueqt6" path="res://Scripts/character_body_2d.gd" id="1_sli8e"]
 [ext_resource type="Texture2D" uid="uid://6liu3qv3oubd" path="res://Sprites/pixilart-sprite.png" id="2_sli8e"]
+[ext_resource type="PackedScene" uid="uid://k8awm8jx4a6l" path="res://Escenas/Inventario_UI.tscn" id="3_ci4fr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fmwtl"]
 size = Vector2(24.375, 15.8125)
@@ -112,3 +113,8 @@ position = Vector2(1, 4)
 scale = Vector2(1.8328125, 1.7482209)
 sprite_frames = SubResource("SpriteFrames_6e3x3")
 animation = &"Izquierda"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CharacterBody2D"]
+
+[node name="Inventario" parent="CharacterBody2D/CanvasLayer" instance=ExtResource("3_ci4fr")]
+visible = false

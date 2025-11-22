@@ -4,6 +4,8 @@ const velocidad = 300
 
 @onready var player = $"."
 @onready var animacion = $AnimatedSprite2D
+# Referencia al inventario (Ajusta la ruta si le pusiste otro nombre)
+@onready var inventario_ui = $CanvasLayer/Inventario
 
 func _physics_process(_delta):
 	
@@ -25,3 +27,5 @@ func _physics_process(_delta):
 	else:
 		animacion.stop()
 	move_and_slide()
+	
+	
