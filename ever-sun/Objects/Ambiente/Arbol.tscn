@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7651e4ydgh0j"]
+
+[ext_resource type="Texture2D" uid="uid://c8d8rjf8b81wu" path="res://Sprites/tree_12.png" id="1_tbpt8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_47746"]
+
+[node name="Arbol" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(11.624997, -2.9768152)
+scale = Vector2(0.21153845, 0.21153843)
+texture = ExtResource("1_tbpt8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 20)
+shape = SubResource("CircleShape2D_47746")

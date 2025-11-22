@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const velocidad = 150
+const velocidad = 300
 
 @onready var player = $"."
 @onready var animacion = $AnimatedSprite2D

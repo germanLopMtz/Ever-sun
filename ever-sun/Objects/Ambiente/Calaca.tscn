@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqijm44n7fnd4"]
+
+[ext_resource type="Texture2D" uid="uid://duxst7mvuvbmk" path="res://Sprites/decor_6.png" id="1_b1g7s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hf57s"]
+
+[node name="Calaca" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4, -3)
+scale = Vector2(0.37234044, 0.3723404)
+texture = ExtResource("1_b1g7s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hf57s")

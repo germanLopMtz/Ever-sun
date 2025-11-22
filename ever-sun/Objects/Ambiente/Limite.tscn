@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bauqbwb4enw17"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_crwxd"]
+size = Vector2(15, 647)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26cv0"]
+size = Vector2(1167, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fs68v"]
+size = Vector2(16, 663)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yrjo0"]
+size = Vector2(1167, 15)
+
+[node name="Limite Izquierda" type="StaticBody2D"]
+
+[node name="Arriba" type="CollisionShape2D" parent="."]
+position = Vector2(-2.5, 323.5)
+shape = SubResource("RectangleShape2D_crwxd")
+
+[node name="Abajo" type="CollisionShape2D" parent="."]
+position = Vector2(573.5, 0)
+shape = SubResource("RectangleShape2D_26cv0")
+
+[node name="Izquierda" type="CollisionShape2D" parent="."]
+position = Vector2(1156, 322.5)
+shape = SubResource("RectangleShape2D_fs68v")
+
+[node name="Derecha" type="CollisionShape2D" parent="."]
+position = Vector2(578.5, 650.5)
+shape = SubResource("RectangleShape2D_yrjo0")
